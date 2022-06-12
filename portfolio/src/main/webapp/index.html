@@ -8,12 +8,83 @@
   </head>
   <body>
     <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click <a href="/hello">here</a> to see content created by server code.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
+
+    <!-- Test for Week II Walkthrough-->
+    <form method="POST">
+        <p>Enter some text here:</p>
+        <textarea name="text-input">hello world</textarea>
+        <br/>
+        <input type="submit" />
+      </form>
+
+    <!-- Title and Introduction-->
+      <h1>Neal's Portfolio</h1>
+      <img src="/images/NealDavar_propic.JPG" width="370" height="270">
+      
+      <h2> Introduction </h1>
+      <p> My name is Neal Davar and I am a junior computer science student at 
+          The University of Texas at Austin. I have demonstrated experience in
+          cross platform mobile app development (Flutter and React Native) and 
+          full stack web development (with what is traditionally known as the Microsoft
+          stack => ASP.NET, Razor HTML, and the MVC design pattern).
+      </p>
+
+      <hr class="solid">
+
+      <h2> Journey Into the World of Computer Science </h1>
+      <p> My journey into the world of software development was somewhat atypical.
+        I was formerly a pre-medical student with a burning desire to help people.
+        However, more recently, I have realized I can obtain the satisfaction of helping
+        people at a potentially larger scale through the world of computer science. 
+        This realization and reflection upon my characteristics of being a lifelong learner
+        and someone who enjoys tinkering with new technologies led to me finding this field interesting.
+        I hope working as a software developer in the industry will allow me to put these interests to
+        use on a larger scale and potentially solve global issues.
+      </p>
+
+      <hr class="solid">
+
+      <!-- Details projects worked on in the past-->
+      <h2>Projects: </h2> 
+
+      <div class="project-container">
+        <h3>The Trevor Project Site</h3> 
+        <h4>Tech Stack: ReactJS, AWS</h4>
+        <h4>Timeline: Nov 2021 - Present</h4>
+        <p>Working with a member of the Trevor Project, an organization focused
+             on suicide prevention efforts.
+        </p>
+      </div>
+
+      <div class="project-container">
+        <h3>Deiku</h3>
+        <h4>Timeline: Oct 2020 - Nov 2020</h4>
+        <h4>Tech Stack: Flutter, JSON + APIS Used: OpenWeatherMaps</h4>
+        <p>Built a Flutter mobile application to target the issue of people staying indoors too much during quarantine.
+            The app gamified the experience of finding a green space or local business location. Over the course
+            of the 24 hour HackTX 2021 hackathon, my team and I used the OpenWeatherAPI to give messages of encouragement
+            depending on the weather and time of day.
+        </p>
+      </div>
+
+      <div class="project-container">
+        <h3>Clubtastic 1.0</h3>
+        <h4>Timeline: May 2019 - August 2019</h4>
+        <h4>Tech Stack: React Native, Firebase</h4>
+        <p>
+            Developed a club hub application for school as a part of a year-long personal project.
+            The app allowed users to explore information about clubs, receive notifications from joined clubs, and more.
+        </p>
+      </div>
+
+
+      <hr class="solid">
+
+      <!-- Socials -->
+
+      <h2>You can find me on the following platforms: </h2>
+      <p>Linkedin: <a>https://www.linkedin.com/in/nealdavar/</a></p>
+      <p>Github: <a> https://github.com/nxdavar</a></p>
     </div>
   </body>
 </html>
