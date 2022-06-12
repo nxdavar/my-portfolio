@@ -16,8 +16,7 @@
 
     <!-- Project-specific properties -->
     <exec.mainClass>com.google.sps.ServerMain</exec.mainClass>
-    <googleCloudProjectId>ndavar-sps-summer22
-</googleCloudProjectId>
+    <googleCloudProjectId>ndavar-sps-summer22 </googleCloudProjectId>
   </properties>
 
   <dependencies>
