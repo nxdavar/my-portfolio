@@ -28,14 +28,14 @@ function addRandomGreeting() {
 }
 
 /**
- * Fetches hard coded string from server
+ * Fetches hard coded list of strings and randomly chooses to display one
  */
 
 async function displayName() {
     const responseFromServer = await fetch('/hello');
-    const textFromResponse = await responseFromServer.text();
+    const textFromResponse = await responseFromServer.json();
+    var index = Math.floor(Math.random() * Object.keys(textFromResponse).length);
     const nameContainer = document.getElementById('name-greeting-text');
-    nameContainer.innerText = textFromResponse;
-
-
+    nameContainer.innerText = textFromResponse[index];
+    document.getElementById('servlet-name-btn').style.display("None");
 }
