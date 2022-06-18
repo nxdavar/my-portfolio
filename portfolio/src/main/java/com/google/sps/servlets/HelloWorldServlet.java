@@ -1,10 +1,9 @@
 package com.google.sps.servlets;
-
+import com.google.gson.Gson;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import com.google.gson.Gson;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -28,13 +27,13 @@ public class HelloWorldServlet extends HttpServlet {
   }
 
  /**
-   * Converts the input of an arraylist of names into a JSON string using the Gson library. Note: We first added
-   * the Gson library dependency to pom.xml.
+   * Converts the input of an arraylist of names into a JSON string using the
+   * Gson library. Note: We first added the Gson library dependency to
+   * pom.xml.
    */
   private String convertToJsonUsingGson(List<String> names) {
     Gson gson = new Gson();
     String json = gson.toJson(names);
     return json;
   }
-
 }

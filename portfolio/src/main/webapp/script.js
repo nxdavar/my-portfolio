@@ -30,7 +30,6 @@ function addRandomGreeting() {
 /**
  * Fetches hard coded list of strings and randomly chooses to display one
  */
-
 async function displayName() {
     const responseFromServer = await fetch('/hello');
     const textFromResponse = await responseFromServer.json();
