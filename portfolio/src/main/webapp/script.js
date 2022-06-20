@@ -26,3 +26,18 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+
+/**
+ * Fetches hard coded list of strings and randomly chooses to display one
+ */
+async function displayName() {
+    const responseFromServer = await fetch('/hello');
+    const allData = await responseFromServer.json(); 
+    var halfLen = (Object.keys(allData).length / 2);
+    var index = Math.floor(Math.random() * (Object.keys(allData).length / 2));
+    const nameContainer = document.getElementById('name-greeting-text');
+    nameContainer.innerText = allData[index];
+    const img = document.getElementById('greeting-image');
+    img.src = allData[index + halfLen];
+    
+ }

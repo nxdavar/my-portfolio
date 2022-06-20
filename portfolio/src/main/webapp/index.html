@@ -9,14 +9,6 @@
   <body>
     <div id="content">
 
-    <!-- Test for Week II Walkthrough-->
-    <form method="POST">
-        <p>Enter some text here:</p>
-        <textarea name="text-input">hello world</textarea>
-        <br/>
-        <input type="submit" />
-      </form>
-
     <!-- Title and Introduction-->
       <h1>Neal's Portfolio</h1>
       <img src="/images/NealDavar_propic.JPG" width="370" height="270">
@@ -28,6 +20,16 @@
           full stack web development (with what is traditionally known as the Microsoft
           stack => ASP.NET, Razor HTML, and the MVC design pattern).
       </p>
+
+      <!-- Hobbies Section -->
+
+      <p>Click this button to view some of my favorite hobbies:</p>
+      <button id="servlet-name-btn" onclick="displayName();">
+        Hobby Button
+      </button>
+
+      <p id="name-greeting-text"></p>
+      <img id="greeting-image" height="200" src=""></img>
 
       <hr class="solid">
 
@@ -82,9 +84,41 @@
 
       <!-- Socials -->
 
-      <h2>You can find me on the following platforms: </h2>
-      <p>Linkedin: <a>https://www.linkedin.com/in/nealdavar/</a></p>
-      <p>Github: <a> https://github.com/nxdavar</a></p>
+      <h2>Feel free to find me on the following platforms: </h2>
+      <form action="/form-handler" method="POST">
+      <label>
+        <input type="radio" name="linkedin-btn" value="true">
+        Visit Neal's Linkedin
+      </label>
+      <br/>
+      <label>
+        <input id="main-github-btn" type="radio" name="github-btn" value="true">
+        Visit Neal's Github
+      </label>
+        <br/>
+        <input id="submit-btn" type="submit" />
+      </form>
+
+      <hr class="solid">
+
+      <h2>Now that you know about me, tell me about yourself!</h2>
+      <p> As someone who loves traveling and connecting with others,
+          I'd love to learn more about you and one of the coolest places
+          you have traveled to. Feel free to drop your name and a picture
+          somewhere you've visited below.
+      </p>
+
+      <form id="image-upload-form" action="/upload-image" method="POST" enctype="multipart/form-data">
+        <p>Type some text:</p>
+        <textarea name="message"></textarea>
+        <br/>
+        <p>Upload an image:</p>
+        <input type="file" name="image">
+        <br/><br/>
+        <button>Submit</button>
+      </form>
+  
+      <p><a href="/view-images">Click here to see all of the uploaded images!</a></p>
     </div>
   </body>
 </html>
