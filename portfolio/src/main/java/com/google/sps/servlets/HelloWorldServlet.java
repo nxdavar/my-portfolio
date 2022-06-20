@@ -17,13 +17,23 @@ public class HelloWorldServlet extends HttpServlet {
 
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    List<String> names = new ArrayList<String>();
-    names.add("Hello Neal!");
-    names.add("Hello Bob!");
-    names.add("Hello Joe!");
-    String json = convertToJsonUsingGson(names);
+    List<String> hobbies = new ArrayList<String>();
+    hobbies.add("Driving my car on back roads (#savethemanuals, also I'm going to plug my Instagram: @lt1bros)");
+    hobbies.add("Traveling");
+    hobbies.add("Trying new food");
+    hobbies.add("Strength training and all things fitness");
+    hobbies.add("Photography and taking aesthetic pictures");
+
+    // List<String> images = new ArrayList<String>();
+    hobbies.add("/images/cornering_civic.jpeg");
+    hobbies.add("/images/traveling_sps.jpeg");
+    hobbies.add("/images/new_food.jpeg");
+    hobbies.add("/images/weight_lifting.jpeg");
+    hobbies.add("/images/NYC_travel.jpg");
+
+    String jsonHobbies = convertToJsonUsingGson(hobbies);  
     response.setContentType("application/json;");  
-    response.getWriter().println(json);
+    response.getWriter().println(jsonHobbies);
   }
 
  /**

@@ -32,9 +32,12 @@ function addRandomGreeting() {
  */
 async function displayName() {
     const responseFromServer = await fetch('/hello');
-    const textFromResponse = await responseFromServer.json();
-    var index = Math.floor(Math.random() * Object.keys(textFromResponse).length);
+    const allData = await responseFromServer.json(); 
+    var halfLen = (Object.keys(allData).length / 2);
+    var index = Math.floor(Math.random() * (Object.keys(allData).length / 2));
     const nameContainer = document.getElementById('name-greeting-text');
-    nameContainer.innerText = textFromResponse[index];
-    document.getElementById('servlet-name-btn').style.display("None");
-}
+    nameContainer.innerText = allData[index];
+    const img = document.getElementById('greeting-image');
+    img.src = allData[index + halfLen];
+    
+ }
