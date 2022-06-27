@@ -39,5 +39,5 @@ async function displayName() {
     nameContainer.innerText = allData[index];
     const img = document.getElementById('greeting-image');
     img.src = allData[index + halfLen];
-    
  }
+ 
