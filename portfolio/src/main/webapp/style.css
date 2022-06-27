@@ -15,20 +15,3 @@
 hr.solid {
     border-top: 2px solid #000;
 }
-
-#greeting-image {
-    object-fit: contain; 
-    width: 300;
-}
-
-#servlet-name-button {
-    border-radius: 5px;
-}
-
-#submit-btn {
-    margin-top: 10px;
-}
-
-#image-upload-form {
-    margin-top: 15px;
-}
