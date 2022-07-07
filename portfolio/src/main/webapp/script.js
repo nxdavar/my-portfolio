@@ -34,10 +34,10 @@ async function displayName() {
     const responseFromServer = await fetch('/hello');
     const allData = await responseFromServer.json(); 
     var halfLen = (Object.keys(allData).length / 2);
-    var index = Math.floor(Math.random() * (Object.keys(allData).length / 2));
+    var index = Math.floor(Math.random() * (halfLen));
     const nameContainer = document.getElementById('name-greeting-text');
     nameContainer.innerText = allData[index];
     const img = document.getElementById('greeting-image');
     img.src = allData[index + halfLen];
-    
  }
+ 
