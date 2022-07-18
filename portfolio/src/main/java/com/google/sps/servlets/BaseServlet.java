@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/form-handler")
-public class FormHandlerServlet extends HttpServlet {
+public class BaseServlet extends HttpServlet {
 
   // method that redirects user to Neal's Linkedin or Github depending
   // on form input
